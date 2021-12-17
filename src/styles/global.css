@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  /* TODO: 支持深色模式 */
+  /* @apply bg-black; */
+}
+
+#__next {
+  @apply mx-auto max-w-3xl relative z-10;
+}
+
+#nprogress .bar {
+  /* TODO: 支持深色模式 */
+  /* background-color: theme("colors.black"); */
+}
+
+#nprogress .peg {
+  /* TODO: 支持深色模式 */
+  /* box-shadow: 0 0 10px theme("colors.black"), 0 0 5px theme("colors.black"); */
+}
