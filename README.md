@@ -4,7 +4,8 @@
 
 + [x] 支持读取 markdown 里的内容
 + [ ] 完成初版设计，支持一下深色模式
-+ [ ] 完成个人介绍
++ [x] 完成个人介绍
++ [ ] 点击联系方式，弹出设计好的微信二维码
 + [ ] 点击头像，随机滤镜
 
 ## 注意事项
@@ -17,3 +18,4 @@
 + [tailwindcss](https://github.com/tailwindlabs/tailwindcss/releases)
 + [tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin)
 + [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)
++ [heroicon](https://heroicons.com/)
