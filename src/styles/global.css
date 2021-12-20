@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply bg-white dark:bg-gray-900;
+body {
+  @apply bg-gray-50 dark:bg-gray-900;
 }
 
 #__next {
@@ -18,12 +18,10 @@ html {
   box-shadow: 0 0 10px theme("colors.gray.900"), 0 0 5px theme("colors.gray.900");
 }
 
-@media (prefers-color-scheme: dark) {
-  #nprogress .bar {
-    background-color: theme("colors.gray.100");
-  }
+.dark #nprogress .bar {
+  background-color: theme("colors.gray.100");
+}
 
-  #nprogress .peg {
-    box-shadow: 0 0 10px theme("colors.gray.100"), 0 0 5px theme("colors.gray.100");
-  }
+.dark #nprogress .peg {
+  box-shadow: 0 0 10px theme("colors.gray.100"), 0 0 5px theme("colors.gray.100");
 }
