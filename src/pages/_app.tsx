@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="charset" content="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
         <link rel="icon" href="/favicon.png" />
-        <title>Jay4q Zhang</title>
+        <title>Jay4Q Zhang</title>
       </Head>
       <Component {...pageProps} />
     </>
