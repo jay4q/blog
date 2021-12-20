@@ -1,17 +1,33 @@
 import { Image, fixOpacityIgnoreHiddenStyle } from 'blitz-libs'
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useState } from 'react'
 import { ChatAlt2Icon } from '@heroicons/react/outline'
+import dynamic from 'next/dynamic'
 
 type Props = {
   data: { [key in string]: string }
 }
 
+const WechatDialog = dynamic(
+  // @ts-ignore
+  () => import('./wechat').then(mod => mod.WechatDialog),
+  { ssr: false }
+)
+
 const ContactMe: FunctionComponent = () => {
+  const [visible, setVisible] = useState(false)
+
   return (
-    <button className=' px-3 py-1.5 flex item-center bg-pink-100 rounded-md dark:bg-pink-900 dark:bg-opacity-75'>
-      <ChatAlt2Icon className='w-5 h-5 text-pink-600 dark:text-pink-200' />
-      <span className='ml-1.5 text-pink-600 text-sm dark:text-pink-200'>Contact Me</span>
-    </button>
+    <>
+      <button className=' px-3 py-1.5 flex item-center bg-pink-100 rounded-md dark:bg-pink-900 dark:bg-opacity-75' onClick={() => setVisible(true)}>
+        <ChatAlt2Icon className='w-5 h-5 text-pink-600 dark:text-pink-200' />
+        <span className='ml-1.5 text-pink-600 text-sm dark:text-pink-200'>Contact Me</span>
+      </button>
+      <WechatDialog
+        closeOnClickOverlay
+        visible={visible}
+        onClose={() => setVisible(false)}
+      />
+    </>
   )
 }
 
