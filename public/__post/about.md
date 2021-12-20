@@ -1,8 +1,8 @@
 ---
 title: "About"
-avatar: ""
-author: "Jay4Q"
-desc: ""
+avatar: "https://6465-dev-8gesrxwdc929eef0-1258640577.tcb.qcloud.la/blog/avatar.jpeg?hash=UFHxmRR%24p3t8~FWBV%3Dn%25F%25sVXoW%2C%3D%7DkVw%7Bog&height=960&width=960"
+author: "Jay4Q Zhang"
+desc: "📌 Focusing"
 createTime: "2021-12-20"
 updateTime: "2021-12-20"
 ---

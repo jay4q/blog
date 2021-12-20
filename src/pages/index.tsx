@@ -3,6 +3,7 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import matter from 'gray-matter'
 import { getPost } from '@/apis/post'
+import { AuthorCard } from '@/components/author'
 
 type Props = {
   source: MDXRemoteSerializeResult
@@ -13,12 +14,13 @@ type Props = {
  * @description 首页
  */
 const Page: FunctionComponent<Props> = ({ source, frontMatter }) => {
-  console.log(frontMatter)
-
   return (
-    <article className='p-4 prose prose-orange max-w-none prose-p:text-justify prose-base dark:prose-invert'>
-      <MDXRemote {...source} />
-    </article>
+    <>
+      <AuthorCard data={frontMatter} />
+      <article className='prose prose-pink max-w-none prose-p:text-justify prose-base dark:prose-invert'>
+        <MDXRemote {...source} />
+      </article>
+    </>
   )
 }
 

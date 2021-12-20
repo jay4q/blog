@@ -58,7 +58,7 @@ export const Header: FunctionComponent = () => {
   const { pathname } = useRouter()
 
   return (
-    <header className='mt-6 px-4 w-full h-11 flex items-center justify-between'>
+    <header className='mt-2 w-full h-11 flex items-center justify-between'>
       <div className='flex items-center'>
         {
           menus.map(item => (
