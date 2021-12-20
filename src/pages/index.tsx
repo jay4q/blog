@@ -13,7 +13,7 @@ const Page: FunctionComponent<Props> = ({ source, frontMatter }) => {
   console.log(frontMatter)
 
   return (
-    <article className='p-4 prose prose-orange dark:prose-invert lg:prose-xl'>
+    <article className='p-4 prose prose-orange max-w-none prose-base dark:prose-invert lg:prose-xl'>
       <MDXRemote {...source} />
     </article>
   )

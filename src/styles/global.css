@@ -2,21 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  /* TODO: 支持深色模式 */
-  /* @apply bg-black; */
-}
-
 #__next {
-  @apply mx-auto max-w-3xl relative z-10;
+  @apply mx-auto max-w-3xl h-screen relative bg-white dark:bg-gray-900;
 }
 
 #nprogress .bar {
-  /* TODO: 支持深色模式 */
-  /* background-color: theme("colors.black"); */
+  background-color: theme("colors.gray.900");
 }
 
 #nprogress .peg {
-  /* TODO: 支持深色模式 */
-  /* box-shadow: 0 0 10px theme("colors.black"), 0 0 5px theme("colors.black"); */
+  box-shadow: 0 0 10px theme("colors.gray.900"), 0 0 5px theme("colors.gray.900");
+}
+
+@media (prefers-color-scheme: dark) {
+  #nprogress .bar {
+    background-color: theme("colors.gray.100");
+  }
+
+  #nprogress .peg {
+    box-shadow: 0 0 10px theme("colors.gray.100"), 0 0 5px theme("colors.gray.100");
+  }
 }
