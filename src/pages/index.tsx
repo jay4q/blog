@@ -9,11 +9,14 @@ type Props = {
   frontMatter: { [key in string]: string }
 }
 
+/**
+ * @description 首页
+ */
 const Page: FunctionComponent<Props> = ({ source, frontMatter }) => {
   console.log(frontMatter)
 
   return (
-    <article className='p-4 prose prose-orange max-w-none prose-base dark:prose-invert lg:prose-xl'>
+    <article className='p-4 prose prose-orange max-w-none prose-base dark:prose-invert'>
       <MDXRemote {...source} />
     </article>
   )

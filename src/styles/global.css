@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply bg-white dark:bg-gray-900;
+}
+
 #__next {
-  @apply mx-auto max-w-3xl h-screen relative bg-white dark:bg-gray-900;
+  @apply mx-auto max-w-3xl h-screen relative;
 }
 
 #nprogress .bar {
