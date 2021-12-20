@@ -4,6 +4,7 @@ import 'intersection-observer'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useConsoleLogo, useGlobalLoading } from '@/utils/hooks'
+import { BaseLayout } from '@/layouts'
 
 export default function App({ Component, pageProps }: AppProps) {
   useGlobalLoading()
@@ -17,7 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.png" />
         <title>Jay4Q Zhang</title>
       </Head>
-      <Component {...pageProps} />
+      <BaseLayout>
+        <Component {...pageProps} />
+      </BaseLayout>
     </>
   )
 }
