@@ -5,7 +5,7 @@ export type ProjectModel = {
 
 export const companyData: ProjectModel[] = [
   {
-    title: '助力中小博物馆提供全方面数字化能力的「Muserverse」开放平台',
+    title: '为博物馆提供公众数字服务能力的「Muserverse」开放平台',
     url: 'weixin://dl/business/?t=stPwTDkLdod',
   },
   {
