@@ -4,7 +4,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head lang='zh' />
+        <Head lang='zh'>
+          <link href='/fonts/font.css' rel='stylesheet' />
+        </Head>
         <body>
           <Main />
           <div id='__modal'></div>

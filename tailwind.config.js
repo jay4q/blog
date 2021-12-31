@@ -3,6 +3,10 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        'YYT2': ['YYT2'],
+        'YYT3': ['YYT3']
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
