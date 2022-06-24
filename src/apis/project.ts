@@ -42,5 +42,5 @@ export const githubData: ProjectModel[] = [
   {
     title: '个人博客😁',
     url: 'https://github.com/jay4q/blog',
-  }
+  },
 ]

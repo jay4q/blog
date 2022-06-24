@@ -12,7 +12,7 @@ export const getPost = (path: string) => {
     const fullPath = join(rootDir, path)
     const source = fs.readFileSync(fullPath, 'utf8')
     return source
-  } catch(err: any) {
+  } catch (err: any) {
     return ''
   }
 }

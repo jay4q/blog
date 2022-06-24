@@ -17,7 +17,7 @@ const Page: FunctionComponent<Props> = ({ source, frontMatter }) => {
   return (
     <>
       <AuthorCard data={frontMatter} />
-      <article className='prose prose-pink max-w-none prose-p:text-justify prose-base dark:prose-invert'>
+      <article className='prose prose-base prose-pink max-w-none prose-p:text-justify dark:prose-invert'>
         <MDXRemote {...source} />
       </article>
     </>
@@ -29,7 +29,7 @@ export async function getStaticProps() {
 
   if (!source) {
     return {
-      notFound: true
+      notFound: true,
     }
   }
 

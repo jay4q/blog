@@ -6,7 +6,7 @@ import { SunIcon, MoonIcon } from '@heroicons/react/outline'
 
 const menus = [
   { title: 'About', path: '/' },
-  { title: 'Projects', path: '/projects' }
+  { title: 'Projects', path: '/projects' },
 ]
 
 const isInitialDark = () => {
@@ -41,12 +41,15 @@ const DarkSwitch: FunctionComponent = () => {
   }, [])
 
   return (
-    <button className='flex items-center justify-center w-9 h-9 rounded-lg bg-gray-200 dark:bg-gray-600 transition-all hover:ring-2 ring-gray-300' onClick={toggleDark}>
-      {
-        isDark
-          ? <MoonIcon className='w-5 h-5 text-gray-800 dark:text-gray-200' />
-          : <SunIcon className='w-5 h-5 text-gray-800 dark:text-gray-200' />
-      }
+    <button
+      className='flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 ring-gray-300 transition-all hover:ring-2 dark:bg-gray-600'
+      onClick={toggleDark}
+    >
+      {isDark ? (
+        <MoonIcon className='h-5 w-5 text-gray-800 dark:text-gray-200' />
+      ) : (
+        <SunIcon className='h-5 w-5 text-gray-800 dark:text-gray-200' />
+      )}
     </button>
   )
 }
@@ -58,15 +61,15 @@ export const Header: FunctionComponent = () => {
   const { pathname } = useRouter()
 
   return (
-    <header className='mt-2 w-full h-11 flex items-center justify-between'>
+    <header className='mt-2 flex h-11 w-full items-center justify-between'>
       <div className='flex items-center'>
-        {
-          menus.map(item => (
-            <Link key={item.title} href={item.path}>
-              <a className={classNames('mr-4 text-gray-900 dark:text-gray-100', item.path === pathname && 'font-bold')}>{item.title}</a>
-            </Link>
-          ))
-        }
+        {menus.map((item) => (
+          <Link key={item.title} href={item.path}>
+            <a className={classNames('mr-4 text-gray-900 dark:text-gray-100', item.path === pathname && 'font-bold')}>
+              {item.title}
+            </a>
+          </Link>
+        ))}
       </div>
       <DarkSwitch />
     </header>

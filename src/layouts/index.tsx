@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react'
 
 export const BaseLayout: FunctionComponent = ({ children }) => {
   return (
-    <main className='flex flex-col w-full p-4 pb-8'>
+    <main className='flex w-full flex-col p-4 pb-8'>
       <Header />
       {children}
       <Footer />
