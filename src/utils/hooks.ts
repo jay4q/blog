@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import NProgress from 'nprogress'
 import { useRouter } from 'next/router'
 
@@ -31,4 +31,39 @@ export const useConsoleLogo = () => {
       )
     )
   }, [])
+}
+
+/**
+ * 复杂内容的弹窗控制器
+ * @param initVisible
+ * @param initialData
+ */
+export const useModal = <T = any>(initVisible = false, initialData?: T) => {
+  const [state, setModal] = useState({
+    visible: initVisible,
+    modalData: initialData,
+  })
+
+  const controls = useMemo(
+    () => ({
+      openModal: (nextData?: T) => {
+        setModal({
+          visible: true,
+          modalData: nextData,
+        })
+      },
+      closeModal: () => {
+        setModal((prevState) => ({
+          visible: false,
+          modalData: prevState.modalData,
+        }))
+      },
+    }),
+    []
+  )
+
+  return {
+    ...state,
+    ...controls,
+  }
 }
