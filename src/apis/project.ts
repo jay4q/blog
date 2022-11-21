@@ -5,11 +5,11 @@ export type ProjectModel = {
 
 export const companyData: ProjectModel[] = [
   {
-    title: '为博物馆提供公众数字服务能力的「Muserverse」开放平台',
+    title: '【Muserverse】服务平台为中小博物馆提供公众数字服务能力',
     url: 'weixin://dl/business/?t=stPwTDkLdod',
   },
   {
-    title: '配合「Museverse」平台的馆方办公小程序',
+    title: '【看展览】小程序为文博爱好者提供便捷的看展/探馆索引',
     url: 'weixin://dl/business/?t=6Z7byXrDsIh',
   },
   {

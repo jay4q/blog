@@ -5,8 +5,8 @@ import { FunctionComponent, useEffect, useState } from 'react'
 import { SunIcon, MoonIcon } from '@heroicons/react/outline'
 
 const menus = [
-  { title: 'About', path: '/' },
-  { title: 'Projects', path: '/projects' },
+  { title: '关于我', path: '/' },
+  { title: '项目展示', path: '/projects' },
 ]
 
 const isInitialDark = () => {
@@ -65,8 +65,14 @@ export const Header: FunctionComponent = () => {
       <div className='flex items-center'>
         {menus.map((item) => (
           <Link key={item.title} href={item.path}>
-            <a className={classNames('mr-4 text-gray-900 dark:text-gray-100', item.path === pathname && 'font-bold')}>
+            <a className={classNames('relative mr-4 text-gray-900 dark:text-gray-100', item.path === pathname && 'font-bold')}>
               {item.title}
+              <span
+                className={classNames(
+                  'absolute -bottom-0.5 left-0 right-0 h-0.5 w-full bg-pink-600 transition duration-300',
+                  item.path === pathname ? 'scale-x-100' : 'scale-x-0'
+                )}
+              ></span>
             </a>
           </Link>
         ))}

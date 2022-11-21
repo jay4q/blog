@@ -6,9 +6,9 @@ type Props = {
   data: { [key in string]: string }
 }
 
-const WechatDialog = dynamic(
+const WXDialog = dynamic(
   // @ts-ignore
-  () => import('./wechat').then((mod) => mod.WechatDialog),
+  () => import('./wx-dialog').then((mod) => mod.WXDialog),
   { ssr: false }
 )
 
@@ -24,7 +24,7 @@ const ContactMe: FunctionComponent = () => {
         <ChatAlt2Icon className='h-5 w-5 text-pink-600 dark:text-pink-200' />
         <span className='ml-1.5 text-sm text-pink-600 dark:text-pink-200'>Contact Me</span>
       </button>
-      <WechatDialog closeOnClickOverlay visible={visible} onClose={() => setVisible(false)} />
+      <WXDialog closeOnClickOverlay qrcodeUrl='/contact.png' visible={visible} onClose={() => setVisible(false)} />
     </>
   )
 }

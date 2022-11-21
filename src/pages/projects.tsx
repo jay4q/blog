@@ -12,7 +12,7 @@ const GithubItem: FunctionComponent<{ data: ProjectModel; index: number }> = ({ 
         href={data.url}
         className='flex h-[160px] w-full flex-col justify-between rounded-lg bg-gray-50 p-4 dark:bg-gray-900 md:h-[200px]'
       >
-        <h1 className='break-all text-lg font-medium text-gray-900 line-clamp-3 dark:text-gray-100 md:line-clamp-4'>
+        <h1 className='break-all text-justify text-lg font-medium text-gray-900 line-clamp-3 dark:text-gray-100 md:line-clamp-4'>
           {data.title}
         </h1>
         <div className='flex items-center'>
@@ -34,7 +34,7 @@ const WorkItem: FunctionComponent<{ data: ProjectModel; index: number }> = ({ da
         href={data.url}
         className='flex h-[160px] w-full flex-col justify-between rounded-lg bg-gray-50 p-4 dark:bg-gray-900 md:h-[200px]'
       >
-        <h1 className='break-all text-lg font-medium text-gray-900 line-clamp-3 dark:text-gray-100 md:line-clamp-4'>
+        <h1 className='break-all text-justify text-lg font-medium text-gray-900 line-clamp-3 dark:text-gray-100 md:line-clamp-4'>
           {data.title}
         </h1>
         <div className='flex items-center'>
