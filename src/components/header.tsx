@@ -64,16 +64,18 @@ export const Header: FunctionComponent = () => {
     <header className='mt-2 flex h-11 w-full items-center justify-between'>
       <div className='flex items-center'>
         {menus.map((item) => (
-          <Link key={item.title} href={item.path}>
-            <a className={classNames('relative mr-4 text-gray-900 dark:text-gray-100', item.path === pathname && 'font-bold')}>
-              {item.title}
-              <span
-                className={classNames(
-                  'absolute -bottom-0.5 left-0 right-0 h-0.5 w-full bg-pink-600 transition duration-300',
-                  item.path === pathname ? 'scale-x-100' : 'scale-x-0'
-                )}
-              ></span>
-            </a>
+          <Link
+            key={item.title}
+            href={item.path}
+            className={classNames('relative mr-4 text-gray-900 dark:text-gray-100', item.path === pathname && 'font-bold')}
+          >
+            {item.title}
+            <span
+              className={classNames(
+                'absolute -bottom-0.5 left-0 right-0 h-0.5 w-full bg-pink-600 transition duration-300',
+                item.path === pathname ? 'scale-x-100' : 'scale-x-0'
+              )}
+            ></span>
           </Link>
         ))}
       </div>

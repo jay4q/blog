@@ -28,7 +28,7 @@ const Page: FunctionComponent = () => {
       <h1 className='mt-8 mb-6 text-2xl font-bold text-gray-900 dark:text-gray-100'>👨‍💻 工作案例</h1>
       <ul className='flex w-full flex-wrap gap-4 md:gap-6'>
         {companyData.map((data, index) => (
-          <WorkItem key={data.url} data={data} index={index} onCardClick={openModal} />
+          <WorkItem key={data.url || data.qrcode} data={data} index={index} onCardClick={openModal} />
         ))}
       </ul>
       <WXDialog closeOnClickOverlay visible={visible} qrcodeUrl={modalData} onClose={closeModal} />
