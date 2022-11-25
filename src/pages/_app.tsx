@@ -8,6 +8,17 @@ import localFont from '@next/font/local'
 
 const zhFont = localFont({
   src: '../../public/fonts/SmileySans-Oblique.ttf.woff2',
+  fallback: [
+    '-apple-system',
+    'system-ui',
+    'Helvetica Neue',
+    'Helvetica,Arial',
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'WenQuanYi Micro Hei',
+    'Microsoft Yahei',
+    'sans-serif',
+  ],
 })
 
 export default function App({ Component, pageProps }: AppProps) {
