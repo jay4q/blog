@@ -24,7 +24,12 @@ const ContactMe: FunctionComponent = () => {
         <ChatAlt2Icon className='h-5 w-5 text-pink-600 dark:text-pink-200' />
         <span className='ml-1.5 text-sm text-pink-600 dark:text-pink-200'>Contact Me</span>
       </button>
-      <WXDialog closeOnClickOverlay qrcodeUrl='/contact.png' visible={visible} onClose={() => setVisible(false)} />
+      <WXDialog
+        closeOnClickOverlay
+        visible={visible}
+        onClose={() => setVisible(false)}
+        qrcodeUrl='https://7370-spa-0g2njvtnd97eff62-1303873307.tcb.qcloud.la/jay4q/contact.png'
+      />
     </>
   )
 }

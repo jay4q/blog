@@ -13,7 +13,7 @@ export const WXDialog: FunctionComponent<WXDialogProps> = ({ qrcodeUrl, message 
   return (
     <Modal {...props}>
       <div className='w-64 rounded-lg bg-gray-100 pb-12 shadow-md dark:bg-gray-900'>
-        {qrcodeUrl && <img alt='qrcode' className='w-full' src={qrcodeUrl} />}
+        {qrcodeUrl && <img alt='qrcode' className='h-64 w-full' src={qrcodeUrl} />}
         <h1 className='w-full text-center font-bold text-gray-900 dark:text-gray-100'>{message}</h1>
       </div>
     </Modal>

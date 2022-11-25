@@ -7,15 +7,15 @@ export type ProjectModel = {
 export const companyData: ProjectModel[] = [
   {
     title: '【Muserverse】服务平台为中小博物馆提供公众数字服务能力',
-    qrcode: '/museverse.png',
+    qrcode: 'https://7370-spa-0g2njvtnd97eff62-1303873307.tcb.qcloud.la/jay4q/museverse.png',
   },
   {
     title: '【看展览】小程序为文博爱好者提供便捷的看展/探馆索引',
-    qrcode: '/kzl.png',
+    qrcode: 'https://7370-spa-0g2njvtnd97eff62-1303873307.tcb.qcloud.la/jay4q/kzl.png',
   },
   {
     title: '提供语音导览、参观预约、志愿者服务等公众服务的吴文化博物馆小程序',
-    qrcode: '/wuzhong.png',
+    qrcode: 'https://7370-spa-0g2njvtnd97eff62-1303873307.tcb.qcloud.la/jay4q/wuzhong.png',
   },
   {
     title: '吴文化博物馆响应式门户网站',
