@@ -14,7 +14,7 @@ export const companyData: ProjectModel[] = [
     qrcode: 'https://7370-spa-0g2njvtnd97eff62-1303873307.tcb.qcloud.la/jay4q/kzl.png',
   },
   {
-    title: '提供语音导览、参观预约、志愿者服务等公众服务的吴文化博物馆小程序',
+    title: '基于【Museverse】私有化部署的吴文化博物馆小程序',
     qrcode: 'https://7370-spa-0g2njvtnd97eff62-1303873307.tcb.qcloud.la/jay4q/wuzhong.png',
   },
   {
@@ -23,7 +23,7 @@ export const companyData: ProjectModel[] = [
   },
   {
     title: '配合上海博物馆《灼烁重现：十五世纪中期景德镇瓷器大展》的H5游戏',
-    url: 'https://wm.kzl.la/shm/zscx/',
+    url: 'https://spa.museshow.cn/shm/zscx/',
   },
   {
     title: '江苏教育博物馆公众号宣传用《古代官场升职记》H5游戏',
